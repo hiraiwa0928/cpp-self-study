@@ -13,6 +13,9 @@ class A {
     public:
         A(int, string);
         A(float);
+        void display() const {
+            std::cout << "m_v: " << m_v << ", m_n: " << m_n << std::endl;
+        }
 };
 
 A::A(int v, string n) : m_v(v), m_n{n} {}
@@ -30,6 +33,7 @@ int main() {
     A cb = {42, "0"};
 
     A dp = (42, 0.0);
+    dp.display();
     // A db = {42, 0.0};
 
     double  pi = 3.14159;
